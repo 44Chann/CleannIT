@@ -1,0 +1,8 @@
+join_dir.py
+main.py
+setup.py
+cleanit.egg-info/PKG-INFO
+cleanit.egg-info/SOURCES.txt
+cleanit.egg-info/dependency_links.txt
+cleanit.egg-info/entry_points.txt
+cleanit.egg-info/top_level.txt
