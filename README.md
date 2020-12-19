@@ -2,5 +2,23 @@
 
 A utility to clean my Download Folders
 
-#instructions
-![Alt Text](./images/clone.gif)
+# instructions
+```sh
+git clone 'https://github.com/yes-vikash/CleannIT'
+
+cd CleannIT
+
+pip3 install --editable .
+ 
+```
+## Run It
+
+```sh 
+clean it 
+```
+# response 
+```
+download.jpeg is moved to /home/vikash/Pictures/download.jpeg
+Clean Done
+
+```
