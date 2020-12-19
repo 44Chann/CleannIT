@@ -2,5 +2,5 @@
 
 A utility to clean my Download Folders
 
-#instructions
+# instructions
 ![Alt Text](./images/clone.gif)
