@@ -1,3 +1,4 @@
+README.md
 join_dir.py
 main.py
 setup.py

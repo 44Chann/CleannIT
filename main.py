@@ -80,6 +80,8 @@ def move():
             dest = os.path.join(MUSIC, dir)
             print(f'{dir} is moved to {dest}')
             shutil.move(src=src, dst=dest)
+        else:
+            print('no file to clean ')
 
 
 def main():
