@@ -46,47 +46,51 @@ def check_path():
 
 
 def move():
-    for dir in os.listdir(DOWNLOADS):
+    if len(os.listdir(DOWNLOADS)) == 0:
+        print('no files in directory')
+    else:
+        for dir in os.listdir(DOWNLOADS):
 
-        file_name, ex = os.path.splitext(dir)
-        src = os.path.join(DOWNLOADS, dir)
+            file_name, ex = os.path.splitext(dir)
+            src = os.path.join(DOWNLOADS, dir)
+            print('hello')
+            
+            if ex in picture_file_types:
 
-        if ex in picture_file_types:
+                dest = os.path.join(PICTURES, dir)
+                print(f'{dir} is moved to {dest}')
+                shutil.move(src=src, dst=dest)
+                
+            elif ex in code_file_types:
 
-            dest = os.path.join(PICTURES, dir)
-            print(f'{dir} is moved to {dest}')
-            shutil.move(src=src, dst=dest)
+                dest = os.path.join(CODE, dir)
+                print(f'{dir} is moved to {dest}')
+                shutil.move(src=src, dst=dest)
 
-        elif ex in code_file_types:
+            elif ex in document_file_types:
 
-            dest = os.path.join(CODE, dir)
-            print(f'{dir} is moved to {dest}')
-            shutil.move(src=src, dst=dest)
+                dest = os.path.join(DOCUMENTS, dir)
+                print(f'{dir} is moved to {dest}')
+                shutil.move(src=src, dst=dest)
 
-        elif ex in document_file_types:
+            elif ex in video_file_types:
 
-            dest = os.path.join(DOCUMENTS, dir)
-            print(f'{dir} is moved to {dest}')
-            shutil.move(src=src, dst=dest)
+                dest = os.path.join(VIDEO, dir)
+                print(f'{dir} is moved to {dest}')
+                shutil.move(src=src, dst=dest)
 
-        elif ex in video_file_types:
+            elif ex in music_file_types:
 
-            dest = os.path.join(VIDEO, dir)
-            print(f'{dir} is moved to {dest}')
-            shutil.move(src=src, dst=dest)
-
-        elif ex in music_file_types:
-
-            dest = os.path.join(MUSIC, dir)
-            print(f'{dir} is moved to {dest}')
-            shutil.move(src=src, dst=dest)
+                dest = os.path.join(MUSIC, dir)
+                print(f'{dir} is moved to {dest}')
+                shutil.move(src=src, dst=dest)
+    
         else:
-            print('no file to clean ')
-
+            print('Clean Done')
 
 def main():
 
     check_path()
     move()
 
-    print('Clean Done')
+    
